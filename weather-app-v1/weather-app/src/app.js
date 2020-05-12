@@ -7,6 +7,7 @@ const forecast = require('./utils/forecast.js')
 
 // Create Express App
 const app = express()
+const port = process.env.PORT || 3000
 
 
 // Set Template Engine: Handlebar Plugin for Express
@@ -102,6 +103,6 @@ app.get('*', (req, res) => {
 
 
 // Start Express Server
-app.listen(3000, () => {
-    console.log('Server is up on port 3000....')
+app.listen(port, () => {
+    console.log('Server is up on port '+ port +'....')
 })
